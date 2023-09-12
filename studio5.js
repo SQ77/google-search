@@ -1,3 +1,5 @@
+// studio 5 in class sheet
+
 // returns a list containing all elements of odd index
 function every_second(items) {
     return is_null(items) || length(items) === 1
