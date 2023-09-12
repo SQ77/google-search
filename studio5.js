@@ -1,3 +1,4 @@
+// returns a list containing all elements of odd index
 function every_second(items) {
     return is_null(items) || length(items) === 1
             ? null
