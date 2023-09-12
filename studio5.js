@@ -17,7 +17,8 @@ function sums_of_list(items) {
 }
 
 // Q2: returns list containing two elements
-// 
+// first element: sum of all elements of even index
+// second element: sum of all elements of odd index
 function sums(items) {
     const odds = every_second(items);
     const evens = pair(list_ref(items, 0), every_second(tail(items)));
