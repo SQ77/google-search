@@ -36,6 +36,7 @@ tree_sum(my_tree);
 // Returns 28
 */
 
+/*
 // Q3
 function accumulate_tree(f, op, initial, tree) {
     return accumulate(((x, y) => is_list(x)
@@ -51,3 +52,4 @@ function flatten(tree) {
 const LoL = list(list(1, 2), list(3, 4, 5, 6), null, list(7, 8, 9));
 display_list(flatten(LoL));
 // Returns list(1, 2, 3, 4, 5, 6, 7, 8, 9) 
+*/
