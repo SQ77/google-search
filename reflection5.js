@@ -20,9 +20,8 @@ flatten_list(LoL);
 // Returns list(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 
-
-
 /*
+// Q2
 function tree_sum(tree) {
     return is_null(tree)
             ? 0
