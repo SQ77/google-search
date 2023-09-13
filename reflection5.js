@@ -8,15 +8,14 @@ function flatten_list(xs) {
 }
 
 function flatten_2(xs) {
-    return is_null(xs)
-            ? null
-            : is_list(head(xs))
-            ? append(flatten_list(head(xs)), flatten_list(tail(xs)))
-            : accumulate(x => pair());
+    return accumulate(((x, y) => is_list(x)
+                            ? append(x, y)
+                            : (x => list(x))(x)),
+                        null, xs);
 }
 
 const LoL = list(list(1, 2), list(3, 4, 5, 6), null, list(7, 8, 9));
-flatten_list(LoL);
+display_list(flatten_2(LoL));
 // Returns list(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 
