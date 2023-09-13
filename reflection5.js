@@ -1,4 +1,4 @@
-/*
+// Q1
 function flatten_list(xs) {
     return is_null(xs)
             ? null
@@ -14,23 +14,13 @@ function flatten_2(xs) {
             ? append(flatten_list(head(xs)), flatten_list(tail(xs)))
             : accumulate(x => pair());
 }
-*/
-
-function accumulate_tree(f, op, initial, tree) {
-    return accumulate(((x, y) => is_list(x)
-                                ? op(x, y)
-                                : f(x)),
-                        initial, tree);
-}
-
-function flatten(tree) {
-    return accumulate_tree(x => list(x), append, null , tree);
-}
-
 
 const LoL = list(list(1, 2), list(3, 4, 5, 6), null, list(7, 8, 9));
-display_list(flatten(LoL));
-// Returns list(1, 2, 3, 4, 5, 6, 7, 8, 9) 
+flatten_list(LoL);
+// Returns list(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+
+
 
 /*
 function tree_sum(tree) {
@@ -46,3 +36,19 @@ const my_tree = list(1, list(2, list(3, 4), 5), list(6, 7));
 tree_sum(my_tree);
 // Returns 28
 */
+
+// Q3
+function accumulate_tree(f, op, initial, tree) {
+    return accumulate(((x, y) => is_list(x)
+                                ? op(x, y)
+                                : f(x)),
+                        initial, tree);
+}
+
+function flatten(tree) {
+    return accumulate_tree(x => list(x), append, null , tree);
+}
+
+const LoL = list(list(1, 2), list(3, 4, 5, 6), null, list(7, 8, 9));
+display_list(flatten(LoL));
+// Returns list(1, 2, 3, 4, 5, 6, 7, 8, 9) 
